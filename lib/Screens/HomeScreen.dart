@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'package:smart_reminders/generated/l10n.dart';
 
 import 'package:smart_reminders/Theme/Theme.dart';
 import 'package:smart_reminders/Responsive/Responsive.dart';
+import 'package:smart_reminders/Providers/PagesProvider.dart';
 
 import 'package:smart_reminders/Widgets/Header.dart';
 import 'package:smart_reminders/Widgets/Titular.dart';
@@ -70,6 +72,7 @@ class HomeScreen extends StatelessWidget
                     tooltip: S.current.home_add,
                     onPressed: ()
                     {
+                        Provider.of<PagesProvider>(context, listen: false).newPage();
                         Navigator.of(context).pushNamed("/program");
                     }
                 )

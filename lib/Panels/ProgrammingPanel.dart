@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
-import 'package:smart_reminders/Theme/Theme.dart';
 import 'package:smart_reminders/Responsive/Responsive.dart';
+import 'package:smart_reminders/Providers/PagesProvider.dart';
 
 import 'package:smart_reminders/Widgets/Titular.dart';
+
+import 'FrecuencyBlock.dart';
+import 'MonthBlock.dart';
+import 'WeekBlock.dart';
+import 'DaysBlock.dart';
+import 'HoursBlock.dart';
+
 import 'package:smart_reminders/Widgets/ViewsController.dart';
-import 'package:smart_reminders/Widgets/Block.dart';
 
 class ProgrammingPanel extends StatefulWidget
 {
@@ -17,7 +24,20 @@ class ProgrammingPanel extends StatefulWidget
 
 class ProgrammingPanelState extends State <ProgrammingPanel>
 {
+    // Attributes //
+    PageController pageController = PageController(initialPage: 0);
     String currentTitle = "Frecuencia";
+
+    // Methods //
+    void changePage()
+    {
+        pageController.animateToPage(
+            Provider.of<PagesProvider>(context, listen: false).pageIndex,
+            curve: Curves.ease,
+            duration: const Duration(milliseconds: 488)
+        );
+        setState((){});
+    }
 
     @override
     Widget build(BuildContext context)
@@ -75,14 +95,15 @@ class ProgrammingPanelState extends State <ProgrammingPanel>
                                     (
                                         child: PageView
                                         (
-                                            physics: const BouncingScrollPhysics(),
+                                            controller: pageController,
+                                            physics: const NeverScrollableScrollPhysics(),
                                             children: const
                                             [
-                                                Block(child: Center(child: Text("1"))),
-                                                Block(child: Center(child: Text("2"))),
-                                                Block(child: Center(child: Text("3"))),
-                                                Block(child: Center(child: Text("4"))),
-                                                Block(child: Center(child: Text("5")))
+                                                FrecuencyBlock(),
+                                                MonthBlock(),
+                                                WeekBlock(),
+                                                DaysBlock(),
+                                                HoursBlock()
                                             ]
                                         )
                                     )
@@ -103,12 +124,7 @@ class ProgrammingPanelState extends State <ProgrammingPanel>
                                     Padding
                                     (
                                         padding: const EdgeInsets.symmetric(horizontal: Responsive.appHorizontalPadding),
-                                        child: ViewsController
-                                        (
-                                            index: 0,
-                                            backFunction: (){},
-                                            nextFunction: (){},
-                                        )
+                                        child: ViewsController(pageChangeFunction: changePage)
                                     ),
                                     const SizedBox(height: Responsive.appTopMargin + 10.0)
                                 ]

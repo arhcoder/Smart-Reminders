@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
+import 'package:smart_reminders/Providers/PagesProvider.dart';
+
+import 'Providers/AppProvider.dart';
 
 import 'Theme/Theme.dart';
-// import 'Responsive/Responsive.dart';
 
 import 'generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -22,7 +25,26 @@ void main()
         )
     );
 
-    runApp(const MyApp());
+    runApp(const ReminderApp());
+}
+
+class ReminderApp extends StatelessWidget
+{
+    const ReminderApp({Key? key}) : super(key: key);
+
+    @override
+    Widget build(BuildContext context)
+    {
+        return MultiProvider
+        (
+            child: const MyApp(),
+            providers:
+            [
+                ChangeNotifierProvider(create: (_) => AppProvider(), lazy: false),
+                ChangeNotifierProvider(create: (_) => PagesProvider(), lazy: false)
+            ]
+        );
+    }
 }
 
 class MyApp extends StatelessWidget
