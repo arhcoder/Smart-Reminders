@@ -8,4 +8,7 @@ class Responsive
     static const double titularHeight = 60.0 - 8.0;
     static const double remindersMargin = 28.0;
     static const double remindersHeight = 100.0;
+
+    static const double ballButtonsSize = 40.0;
+    static const double viewsControllerDotsSize = 10.0;
 }

@@ -5,7 +5,18 @@ import 'package:smart_reminders/Responsive/Responsive.dart';
 
 class ViewsController extends StatefulWidget
 {
-    const ViewsController({Key? key}) : super(key: key);
+    final int index;
+    final VoidCallback backFunction;
+    final VoidCallback nextFunction;
+
+    const ViewsController
+    ({
+        Key? key,
+        required this.index,
+        required this.backFunction,
+        required this.nextFunction
+    })
+    : super(key: key);
 
     @override
     _ViewsControllerState createState() => _ViewsControllerState();

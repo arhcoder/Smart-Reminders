@@ -5,6 +5,7 @@ import 'package:smart_reminders/Responsive/Responsive.dart';
 
 import 'package:smart_reminders/Widgets/Titular.dart';
 import 'package:smart_reminders/Widgets/ViewsController.dart';
+import 'package:smart_reminders/Widgets/Block.dart';
 
 class ProgrammingPanel extends StatefulWidget
 {
@@ -58,68 +59,34 @@ class ProgrammingPanelState extends State <ProgrammingPanel>
                         Container
                         (
                             // color: AppColors.box,
-                            width: MediaQuery.of(context).size.width - 2 * Responsive.appHorizontalPadding,
-                            height: MediaQuery.of(context).size.width - 2 * Responsive.appHorizontalPadding + 60.0,
+                            width: MediaQuery.of(context).size.width,
+                            height: MediaQuery.of(context).size.height
+                            - 3 * Responsive.appTopMargin + 10.0
+                            - 2 * Responsive.titularHeight
+                            - Responsive.appHeaderHeight,
 
-                            child: Expanded
+                            // padding: const EdgeInsets.symmetric(vertical: 2 * Responsive.appHorizontalPadding + 60.0),
+                            
+                            child: Column
                             (
-                                child: PageView
-                                (
-                                    physics: const BouncingScrollPhysics(),
-                                    children:
-                                    [
-                                        Container
+                                children:
+                                [
+                                    Expanded
+                                    (
+                                        child: PageView
                                         (
-                                            decoration: BoxDecoration
-                                            (
-                                                color: AppColors.box,
-                                                borderRadius: BorderRadius.circular(20.0)
-                                            ),
-
-                                            child: const Center(child: Text("1"))
-                                        ),
-                                        Container
-                                        (
-                                            decoration: BoxDecoration
-                                            (
-                                                color: AppColors.box,
-                                                borderRadius: BorderRadius.circular(20.0)
-                                            ),
-
-                                            child: const Center(child: Text("2"))
-                                        ),
-                                        Container
-                                        (
-                                            decoration: BoxDecoration
-                                            (
-                                                color: AppColors.box,
-                                                borderRadius: BorderRadius.circular(20.0)
-                                            ),
-
-                                            child: const Center(child: Text("3"))
-                                        ),
-                                        Container
-                                        (
-                                            decoration: BoxDecoration
-                                            (
-                                                color: AppColors.box,
-                                                borderRadius: BorderRadius.circular(20.0)
-                                            ),
-
-                                            child: const Center(child: Text("4"))
-                                        ),
-                                        Container
-                                        (
-                                            decoration: BoxDecoration
-                                            (
-                                                color: AppColors.box,
-                                                borderRadius: BorderRadius.circular(20.0)
-                                            ),
-
-                                            child: const Center(child: Text("5"))
+                                            physics: const BouncingScrollPhysics(),
+                                            children: const
+                                            [
+                                                Block(child: Center(child: Text("1"))),
+                                                Block(child: Center(child: Text("2"))),
+                                                Block(child: Center(child: Text("3"))),
+                                                Block(child: Center(child: Text("4"))),
+                                                Block(child: Center(child: Text("5")))
+                                            ]
                                         )
-                                    ]
-                                )
+                                    )
+                                ]
                             )
                         ),
 
@@ -131,14 +98,19 @@ class ProgrammingPanelState extends State <ProgrammingPanel>
 
                             child: Column
                             (
-                                children: const
+                                children:
                                 [
                                     Padding
                                     (
-                                        padding: EdgeInsets.symmetric(horizontal: Responsive.appHorizontalPadding),
-                                        child: ViewsController()
+                                        padding: const EdgeInsets.symmetric(horizontal: Responsive.appHorizontalPadding),
+                                        child: ViewsController
+                                        (
+                                            index: 0,
+                                            backFunction: (){},
+                                            nextFunction: (){},
+                                        )
                                     ),
-                                    SizedBox(height: Responsive.appTopMargin + 10.0)
+                                    const SizedBox(height: Responsive.appTopMargin + 10.0)
                                 ]
                             )
                         )
