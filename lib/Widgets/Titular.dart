@@ -20,6 +20,7 @@ class Titular extends StatelessWidget
             width: double.infinity,
             height: Responsive.titularHeight,
             color: AppColors.main,
+
             child: Padding
             (
                 padding: const EdgeInsets.all(10.0),
