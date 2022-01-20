@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:smart_reminders/generated/l10n.dart';
 
 import 'package:smart_reminders/Theme/Theme.dart';
-// import 'package:smart_reminders/Responsive/Responsive.dart';
 
 import 'package:smart_reminders/Widgets/Header.dart';
+import 'package:smart_reminders/Panels/ProgrammingPanel.dart';
 
 class ProgramReminderScreen extends StatelessWidget
 {
@@ -30,7 +30,7 @@ class ProgramReminderScreen extends StatelessWidget
 
             backgroundColor: AppColors.background,
             
-            body: Container()
+            body: const ProgrammingPanel()
         );
     }
 }
