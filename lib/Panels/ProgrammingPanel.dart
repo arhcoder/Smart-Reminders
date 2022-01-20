@@ -45,7 +45,7 @@ class ProgrammingPanelState extends State <ProgrammingPanel>
                             (
                                 children:
                                 [
-                                    const SizedBox(height: Responsive.appTopMargin),
+                                    const SizedBox(height: Responsive.appTopMargin + 10.0),
                                     Padding
                                     (
                                         padding: const EdgeInsets.symmetric(horizontal: Responsive.appHorizontalPadding),

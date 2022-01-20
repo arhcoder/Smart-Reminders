@@ -28,7 +28,7 @@ class ReminderScreen extends StatelessWidget
                     const Padding
                     (
                         padding: EdgeInsets.symmetric(horizontal: Responsive.appHorizontalPadding),
-                        child: Titular(title: "Mi Recordatorio")
+                        child: Titular(title: "Mi recordatorio")
                     ),
                     const SizedBox(height: Responsive.appVerticalPadding),
                     Container

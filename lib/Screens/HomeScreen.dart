@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget
                     Padding
                     (
                         padding: const EdgeInsets.symmetric(horizontal: Responsive.appHorizontalPadding),
-                        child: Titular(title: S.current.home_title),
+                        child: Titular(title: S.current.home_title, big: true),
                     ),
 
                     Expanded

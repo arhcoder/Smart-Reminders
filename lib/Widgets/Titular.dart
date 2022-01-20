@@ -10,7 +10,10 @@ class Titular extends StatelessWidget
     /// Word into the title.
     final String title;
 
-    const Titular({Key? key, required this.title}) : super(key: key);
+    /// If it is a big titular; normally with capital letters.
+    final bool big;
+
+    const Titular({Key? key, required this.title, this.big = false}) : super(key: key);
 
     @override
     Widget build(BuildContext context)
@@ -18,7 +21,9 @@ class Titular extends StatelessWidget
         return Container
         (
             width: double.infinity,
-            height: Responsive.titularHeight,
+            height: (big)
+            ? Responsive.titularHeight + 8.0
+            : Responsive.titularHeight,
             color: AppColors.main,
 
             child: Padding
