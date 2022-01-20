@@ -40,11 +40,17 @@ flutter:
   #  - assets/images/image.png
 
   fonts:
-    - family: Gotham
+    - family: Gotham Book
+      fonts:
+        - asset: assets/fonts/Gotham-Book.ttf
+
+    - family: Gotham Bold
       fonts:
         - asset: assets/fonts/Gotham-Bold.ttf
+        
+    - family: Gotham Medium
+      fonts:
         - asset: assets/fonts/Gotham-Medium.ttf
-        - asset: assets/fonts/Gotham-Book.ttf
   
 flutter_intl:
   enabled: true

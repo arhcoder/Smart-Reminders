@@ -12,13 +12,16 @@ class Header extends StatelessWidget implements PreferredSizeWidget
     /// Title of the AppBar if it is mini.
     final String title;
 
+    /// Extra space on the hight of default AppBar.
+    final double extraMiniHeaderHeight = 10.0;
+
     const Header({Key? key, this.mini = false, this.title = ""}) : super(key: key);
 
     @override
     Size get preferredSize => Size.fromHeight(
         (mini)
-        ? kToolbarHeight
-        : Responsive.headerHeight,
+        ? kToolbarHeight + extraMiniHeaderHeight
+        : Responsive.appHeaderHeight,
     );
 
     @override
@@ -29,10 +32,26 @@ class Header extends StatelessWidget implements PreferredSizeWidget
             backgroundColor: AppColors.main,
             toolbarHeight: (mini)
             ? kToolbarHeight
-            : Responsive.headerHeight,
+            : Responsive.appHeaderHeight,
 
             title: (mini)
-            ? Text(title)
+            ? Center
+            (
+                child: Padding
+                (
+                    padding: EdgeInsets.only(top: extraMiniHeaderHeight),
+                    child: Text
+                    (
+                        title,
+                        style: const TextStyle
+                        (
+                            fontFamily: "Gotham Bold",
+                            color: AppColors.white,
+                            fontSize: 16.0
+                        )
+                    )
+                )
+            )
             : const Text("[LOGO]"),
             foregroundColor: AppColors.white,
             centerTitle: true,
@@ -41,10 +60,22 @@ class Header extends StatelessWidget implements PreferredSizeWidget
             [
                 GestureDetector
                 (
-                    child: const Padding
+                    child: Padding
                     (
-                        padding: EdgeInsets.only(right: 20.0),
-                        child: Icon(Icons.info_outlined, color: AppColors.white, size: 30),
+                        padding: EdgeInsets.only(
+                            top: (mini)
+                            ? extraMiniHeaderHeight
+                            : 0.0,
+                            right: 20.0
+                        ),
+                        child: Icon
+                        (
+                            Icons.info_outlined,
+                            color: AppColors.white,
+                            size: (!mini)
+                            ? 30.0
+                            : 26.0
+                        ),
                     ),
                     onTap: (){Navigator.of(context).pushNamed("/info");}
                 )
