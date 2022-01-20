@@ -12,7 +12,7 @@ import 'WeekBlock.dart';
 import 'DaysBlock.dart';
 import 'HoursBlock.dart';
 
-import 'package:smart_reminders/Widgets/ViewsController.dart';
+import 'package:smart_reminders/Widgets/PagesController.dart';
 
 class ProgrammingPanel extends StatefulWidget
 {
@@ -124,7 +124,7 @@ class ProgrammingPanelState extends State <ProgrammingPanel>
                                     Padding
                                     (
                                         padding: const EdgeInsets.symmetric(horizontal: Responsive.appHorizontalPadding),
-                                        child: ViewsController(pageChangeFunction: changePage)
+                                        child: PagesController(pageChangeFunction: changePage)
                                     ),
                                     const SizedBox(height: Responsive.appTopMargin + 10.0)
                                 ]

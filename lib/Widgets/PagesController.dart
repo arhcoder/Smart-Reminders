@@ -5,17 +5,17 @@ import 'package:smart_reminders/Theme/Theme.dart';
 import 'package:smart_reminders/Responsive/Responsive.dart';
 import 'package:smart_reminders/Providers/PagesProvider.dart';
 
-class ViewsController extends StatefulWidget
+class PagesController extends StatefulWidget
 {
     final VoidCallback pageChangeFunction;
 
-    const ViewsController({Key? key, required this.pageChangeFunction}) : super(key: key);
+    const PagesController({Key? key, required this.pageChangeFunction}) : super(key: key);
 
     @override
-    ViewsControllerState createState() => ViewsControllerState();
+    PagesControllerState createState() => PagesControllerState();
 }
 
-class ViewsControllerState extends State <ViewsController>
+class PagesControllerState extends State <PagesController>
 {
     void navigationLogic(int direction)
     {
