@@ -1,9 +1,68 @@
 {
-    "info": "Información",
-    
-    "home_title": "MIS RECORDATORIOS",
-    "home_add": "Crear recordatorio",
+    "info": "Más información",
+
+    "home_titular": "MIS RECORDATORIOS",
+    "home_empty": "No ha creado ningún recordatorio",
+    "home_add": "Crear nuevo recordatorio",
+
 
     "program_header_new": "NUEVO RECORDATORIO",
-    "program_header_edit": "EDITAR RECORDATORIO"
+    "program_header_edit": "EDITAR RECORDATORIO",
+    
+    "program_titular_frecuency": "Frecuencia",
+    "program_kind_yearly_card": "Anual",
+    "program_kind_yearly_description": "Anual: Cuando quieres ser notificado sólo algunos meses específicos del año.",
+    "program_kind_monthly_card": "Mensual",
+    "program_kind_monthly_description": "Mensual: Cuando quieres ser notificado sólo algunos días específicos de cada mes.",
+    "program_kind_weekly_card": "Semanal",
+    "program_kind_weekly_description": "Semanal: Cuando quieres ser notificado sólo en días específicos de la semana.",
+    "program_kind_daily_card": "Diario",
+    "program_kind_daily_description": "Diario: Cuando quieres ser notificado todos los días.",
+    "program_description_hint": "Descripción del recordatorio...",
+
+    "program_titular_months": "Selecciona los meses",
+    "program_month_01": "ENE",
+    "program_month_02": "FEB",
+    "program_month_03": "MAR",
+    "program_month_04": "ABR",
+    "program_month_05": "MAY",
+    "program_month_06": "JUN",
+    "program_month_07": "JUL",
+    "program_month_08": "AGO",
+    "program_month_09": "SEP",
+    "program_month_10": "OCT",
+    "program_month_11": "NOV",
+    "program_month_12": "DIC",
+
+    "program_titular_weeks": "Selecciona los días",
+    "program_titular_01": "LUNES",
+    "program_titular_02": "MARTES",
+    "program_titular_03": "MIÉRCOLES",
+    "program_titular_04": "JUEVES",
+    "program_titular_05": "VIERNES",
+    "program_titular_06": "SÁBADOS",
+    "program_titular_07": "DOMINGOS",
+
+    "program_titular_days": "Selecciona los días",
+
+    "program_titular_hours": "Selecciona las horas",
+    "program_times_01": "Recordarme",
+    "program_times_02": "veces;",
+    "program_each_01": "Cada",
+    "program_each_02": "horas;",
+    "program_since_01": "Desde las",
+    "program_since_02": "horas;",
+
+
+    "reminder_titular": "Mi recordatorio",
+    "reminder_yearly_months_message": "{emoji} Todos los meses {months}.",
+    "reminder_yearly_weekly_message": "{emoji} Todos los días {weekDays}.",
+    "reminder_yearly_daily_message": "{emoji} Todos los días {days}.",
+    "reminder_yearly_monthly_message": "{emoji} Todos los días {days} del mes.",
+    "reminder_yearly_days_message": "{emoji} Los días {days}.",
+    "reminder_yearly_hours_message": "{emoji} {times} veces, a partir de las {hour} hours, cada {each} horas.",
+    "reminder_ok_button": "¡Entendido!",
+    "reminder_delete_button": "Borrar",
+    "reminder_pause_button": "Pausar",
+    "reminder_edit_button": "Editar"
 }

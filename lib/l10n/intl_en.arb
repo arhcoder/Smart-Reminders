@@ -1,9 +1,68 @@
 {
-    "info": "Information",
-    
-    "home_title": "MY REMINDERS",
-    "home_add": "Create reminder",
+    "info": "More information",
+
+    "home_titular": "MY REMINDERS",
+    "home_empty": "You have not created any reminder",
+    "home_add": "Create new reminder",
+
 
     "program_header_new": "NEW REMINDER",
-    "program_header_edit": "EDIT REMINDER"
+    "program_header_edit": "EDIT REMINDER",
+    
+    "program_titular_frecuency": "Frecuency",
+    "program_kind_yearly_card": "Yearly",
+    "program_kind_yearly_description": "Yearly: When you want to be notified just in some specific months of each year.",
+    "program_kind_monthly_card": "Monthly",
+    "program_kind_monthly_description": "Monthly: When you want to be notified just in some specific days of each month.",
+    "program_kind_weekly_card": "Weekly",
+    "program_kind_weekly_description": "Semanal: Cuando quieres ser notificado sólo en días específicos de la semana.",
+    "program_kind_daily_card": "Daily",
+    "program_kind_daily_description": "Daily: When yo want to be notified all days.",
+    "program_description_hint": "Reminder description...",
+
+    "program_titular_months": "Choose the months",
+    "program_month_01": "JAN",
+    "program_month_02": "FEB",
+    "program_month_03": "MAR",
+    "program_month_04": "APR",
+    "program_month_05": "AMY",
+    "program_month_06": "JUN",
+    "program_month_07": "JUL",
+    "program_month_08": "AUG",
+    "program_month_09": "SEP",
+    "program_month_10": "OCT",
+    "program_month_11": "NOV",
+    "program_month_12": "DEC",
+
+    "program_titular_weeks": "Choose the days",
+    "program_titular_01": "MONDAYS",
+    "program_titular_02": "TUESDAYS",
+    "program_titular_03": "WEDNESDAYS",
+    "program_titular_04": "THURSDAYS",
+    "program_titular_05": "FRIDAYS",
+    "program_titular_06": "SATURDAYS",
+    "program_titular_07": "SUNDAYS",
+
+    "program_titular_days": "Choose the days",
+
+    "program_titular_hours": "Choose the hours",
+    "program_times_01": "Remind me",
+    "program_times_02": "times;",
+    "program_each_01": "Each",
+    "program_each_02": "hours;",
+    "program_since_01": "From",
+    "program_since_02": "hours;",
+
+
+    "reminder_titular": "My reminder",
+    "reminder_yearly_months_message": "{emoji} Every {months}.",
+    "reminder_yearly_weekly_message": "{emoji} Every {weekDays}.",
+    "reminder_yearly_daily_message": "{emoji} Every {days}.",
+    "reminder_yearly_monthly_message": "{emoji} Every {days} of the month",
+    "reminder_yearly_days_message": "{emoji} On days {days}.",
+    "reminder_yearly_hours_message": "{emoji} {times} times, from {hour} hours, each {each} hours",
+    "reminder_ok_button": "Got it!",
+    "reminder_delete_button": "Delete",
+    "reminder_pause_button": "Pause",
+    "reminder_edit_button": "Edit"
 }
