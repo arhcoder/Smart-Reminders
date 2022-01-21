@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:smart_reminders/Providers/AppProvider.dart';
 
 import 'package:smart_reminders/Theme/Theme.dart';
 import 'package:smart_reminders/Responsive/Responsive.dart';
@@ -22,33 +23,37 @@ class PagesControllerState extends State <PagesController>
 {
     void navigationLogic(int direction)
     {
-        /// Current page.
+        /// Current page from PagesProvider.
         int currentPage = Provider.of<PagesProvider>(context, listen: false).pageIndex;
+        
+        /// Current amount page from PagesProvider.
+        int amountPage = Provider.of<PagesProvider>(context, listen: false).pageAmountIndex;
+
+        /// Reminder Kind from AppProvider.
+        int reminderKind = Provider.of<AppProvider>(context, listen: false).reminderKind;
+
+        /// Navigation guide from PagesProvider.
+        List <int> navigationGuide = Provider.of<PagesProvider>(context, listen: false)
+        .getNavigationGuide(reminderKind);
 
         /// If direction == 0, it implements the goes back logic.
         /// If direction == 1, it implements the goes next logic.
         if (direction == 0)
         {
-            // Annual navigation //
-            if (1 == 1)
-            {
-                Provider.of<PagesProvider>(context, listen: false).setCurrentPageIndex(
-                    currentPage - 1
-                );
-                Provider.of<PagesProvider>(context, listen: false).setDotsState();
-            }
+            Provider.of<PagesProvider>(context, listen: false).setCurrentPageIndex(
+                navigationGuide[amountPage - 1] - 1
+            );
+            Provider.of<PagesProvider>(context, listen: false).setDotsState();
+            Provider.of<PagesProvider>(context, listen: false).setPageAmountIndex(amountPage - 1);
         }
         else if (direction == 1)
         {
-            if (1 == 1)
-            {
-                Provider.of<PagesProvider>(context, listen: false).setCurrentPageIndex(
-                    currentPage + 1
-                );
-                Provider.of<PagesProvider>(context, listen: false).setDotsState();
-            }
+            Provider.of<PagesProvider>(context, listen: false).setCurrentPageIndex(
+                navigationGuide[amountPage + 1] - 1
+            );
+            Provider.of<PagesProvider>(context, listen: false).setDotsState();
+            Provider.of<PagesProvider>(context, listen: false).setPageAmountIndex(amountPage + 1);
         }
-
     }
 
     @override

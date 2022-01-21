@@ -7,13 +7,13 @@ class AppProvider extends ChangeNotifier
     // CURRENT REMINDER //
 
     /// ID for the selected reminder in the database.
-    String currentReminderID;
+    String reminderID;
 
     /// Yearly Reminders  = [1];
     /// Monthly Reminders = [2];
     /// Weekly Reminders  = [3];
     /// Daily Reminders   = [4];
-    int currentReminderKind;
+    int reminderKind;
 
     /// Description of the current reminder.
     String description;
@@ -22,8 +22,8 @@ class AppProvider extends ChangeNotifier
     // CONSTRUCTOR //
     AppProvider
     ({
-        this.currentReminderID = "0000",
-        this.currentReminderKind = 1,
+        this.reminderID = "0000",
+        this.reminderKind = 1,
         this.description = ""
     });
 
@@ -31,8 +31,8 @@ class AppProvider extends ChangeNotifier
     // METHODS //
     void resetRemiderValues()
     {
-        currentReminderID = "0000";
-        currentReminderKind = 1;
+        reminderID = "0000";
+        reminderKind = 1;
         description = "";
     }
 }
