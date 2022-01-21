@@ -336,70 +336,70 @@ class S {
   }
 
   /// `MONDAYS`
-  String get program_titular_01 {
+  String get program_week_01 {
     return Intl.message(
       'MONDAYS',
-      name: 'program_titular_01',
+      name: 'program_week_01',
       desc: '',
       args: [],
     );
   }
 
   /// `TUESDAYS`
-  String get program_titular_02 {
+  String get program_week_02 {
     return Intl.message(
       'TUESDAYS',
-      name: 'program_titular_02',
+      name: 'program_week_02',
       desc: '',
       args: [],
     );
   }
 
   /// `WEDNESDAYS`
-  String get program_titular_03 {
+  String get program_week_03 {
     return Intl.message(
       'WEDNESDAYS',
-      name: 'program_titular_03',
+      name: 'program_week_03',
       desc: '',
       args: [],
     );
   }
 
   /// `THURSDAYS`
-  String get program_titular_04 {
+  String get program_week_04 {
     return Intl.message(
       'THURSDAYS',
-      name: 'program_titular_04',
+      name: 'program_week_04',
       desc: '',
       args: [],
     );
   }
 
   /// `FRIDAYS`
-  String get program_titular_05 {
+  String get program_week_05 {
     return Intl.message(
       'FRIDAYS',
-      name: 'program_titular_05',
+      name: 'program_week_05',
       desc: '',
       args: [],
     );
   }
 
   /// `SATURDAYS`
-  String get program_titular_06 {
+  String get program_week_06 {
     return Intl.message(
       'SATURDAYS',
-      name: 'program_titular_06',
+      name: 'program_week_06',
       desc: '',
       args: [],
     );
   }
 
   /// `SUNDAYS`
-  String get program_titular_07 {
+  String get program_week_07 {
     return Intl.message(
       'SUNDAYS',
-      name: 'program_titular_07',
+      name: 'program_week_07',
       desc: '',
       args: [],
     );

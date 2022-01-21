@@ -35,13 +35,13 @@
     "program_month_12": "DEC",
 
     "program_titular_weeks": "Choose the days",
-    "program_titular_01": "MONDAYS",
-    "program_titular_02": "TUESDAYS",
-    "program_titular_03": "WEDNESDAYS",
-    "program_titular_04": "THURSDAYS",
-    "program_titular_05": "FRIDAYS",
-    "program_titular_06": "SATURDAYS",
-    "program_titular_07": "SUNDAYS",
+    "program_week_01": "MONDAYS",
+    "program_week_02": "TUESDAYS",
+    "program_week_03": "WEDNESDAYS",
+    "program_week_04": "THURSDAYS",
+    "program_week_05": "FRIDAYS",
+    "program_week_06": "SATURDAYS",
+    "program_week_07": "SUNDAYS",
 
     "program_titular_days": "Choose the days",
 
