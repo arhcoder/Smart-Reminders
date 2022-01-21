@@ -11,5 +11,5 @@ class Responsive
     static const double remindersHeight = 100.0;
 
     static const double ballButtonsSize = 40.0;
-    static const double viewsControllerDotsSize = 10.0;
+    static const double pagesControllerDotSize = 16.0;
 }

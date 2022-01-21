@@ -3,7 +3,10 @@ import 'package:provider/provider.dart';
 
 import 'package:smart_reminders/Theme/Theme.dart';
 import 'package:smart_reminders/Responsive/Responsive.dart';
+
 import 'package:smart_reminders/Providers/PagesProvider.dart';
+
+import 'PagesControllerDot.dart';
 
 class PagesController extends StatefulWidget
 {
@@ -19,6 +22,9 @@ class PagesControllerState extends State <PagesController>
 {
     void navigationLogic(int direction)
     {
+        /// Current page.
+        int currentPage = Provider.of<PagesProvider>(context, listen: false).pageIndex;
+
         /// If direction == 0, it implements the goes back logic.
         /// If direction == 1, it implements the goes next logic.
         if (direction == 0)
@@ -27,11 +33,9 @@ class PagesControllerState extends State <PagesController>
             if (1 == 1)
             {
                 Provider.of<PagesProvider>(context, listen: false).setCurrentPageIndex(
-                    Provider.of<PagesProvider>(context, listen: false).pageIndex - 1
+                    currentPage - 1
                 );
-                setState(() {
-                  
-                });
+                Provider.of<PagesProvider>(context, listen: false).setDotsState();
             }
         }
         else if (direction == 1)
@@ -39,23 +43,20 @@ class PagesControllerState extends State <PagesController>
             if (1 == 1)
             {
                 Provider.of<PagesProvider>(context, listen: false).setCurrentPageIndex(
-                    Provider.of<PagesProvider>(context, listen: false).pageIndex + 1
+                    currentPage + 1
                 );
-                setState(() {
-                  
-                });
+                Provider.of<PagesProvider>(context, listen: false).setDotsState();
             }
         }
-        else
-        {
-            // Error //
-        }
-    }
 
+    }
 
     @override
     Widget build(BuildContext context)
     {
+        // List of dots states //
+        List <int> dotsStates = Provider.of<PagesProvider>(context).dotsState;
+
         return Container
         (
             width: double.infinity,
@@ -94,16 +95,25 @@ class PagesControllerState extends State <PagesController>
                     ),
 
                     // Dots Panel //
-                    const SizedBox(width: 20.0),
-                    Expanded(child: Container
+                    const SizedBox(width: 44.0),
+                    Expanded
                     (
-                        decoration: BoxDecoration
+                        child: Row
                         (
-                            color: AppColors.card,
-                            borderRadius: BorderRadius.circular(20.0)
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+
+                            children:
+                            [
+                                PagesControllerDot(state: dotsStates[0]),
+                                PagesControllerDot(state: dotsStates[1]),
+                                PagesControllerDot(state: dotsStates[2]),
+                                PagesControllerDot(state: dotsStates[3]),
+                                PagesControllerDot(state: dotsStates[4])
+                            ]
                         )
-                    )),
-                    const SizedBox(width: 20.0),
+                    ),
+                    const SizedBox(width: 44.0),
 
                     // Next Button //
                     Container
