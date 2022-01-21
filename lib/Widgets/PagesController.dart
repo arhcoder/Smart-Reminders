@@ -24,7 +24,7 @@ class PagesControllerState extends State <PagesController>
     void navigationLogic(int direction)
     {
         /// Current page from PagesProvider.
-        int currentPage = Provider.of<PagesProvider>(context, listen: false).pageIndex;
+        // int currentPage = Provider.of<PagesProvider>(context, listen: false).pageIndex;
         
         /// Current amount page from PagesProvider.
         int amountPage = Provider.of<PagesProvider>(context, listen: false).pageAmountIndex;
