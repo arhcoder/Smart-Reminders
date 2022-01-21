@@ -9,6 +9,6 @@ class HoursBlock extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
-        return const Block(child: Center(child: Text("5")));
+        return const Block(child: Center(child: Text("")));
     }
 }

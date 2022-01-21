@@ -9,6 +9,6 @@ class FrecuencyBlock extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
-        return const Block(child: Center(child: Text("1")));
+        return const Block(child: Center(child: Text("")));
     }
 }

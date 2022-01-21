@@ -9,6 +9,6 @@ class MonthBlock extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
-        return const Block(child: Center(child: Text("2")));
+        return const Block(child: Center(child: Text("")));
     }
 }
