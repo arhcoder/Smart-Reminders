@@ -1,40 +1,86 @@
 import 'package:flutter/material.dart';
 
-
-
 class AppProvider extends ChangeNotifier
 {
-    // ATTRIBUTES //
+    // REMINDER ATTRIBUTES MAP //
+    Map <String, dynamic> REMINDER =
+    {
+        /// ID for the selected reminder in the database.
+        /// Not-Nullable; first value = 1.
+        /// INT;
+        "ID":  1,
 
-    // CURRENT REMINDER //
+        /// Yearly Reminders  = [1];
+        /// Monthly Reminders = [2];
+        /// Weekly Reminders  = [3];
+        /// Daily Reminders   = [4];
+        /// Not-Nullable; default value = [1].
+        /// INT;
+        "KIND": 1,
 
-    /// ID for the selected reminder in the database.
-    String reminderID;
+        /// Description of the current reminder.
+        /// Not-Nullable; default value = "".
+        /// STRING;
+        "DESCRIPTION": "",
 
-    /// Yearly Reminders  = [1];
-    /// Monthly Reminders = [2];
-    /// Weekly Reminders  = [3];
-    /// Daily Reminders   = [4];
-    int reminderKind;
+        /// List of months added to the reminder [1, 12];
+        /// It is only for yearly reminders.
+        /// [0] if it doesn't has months.
+        /// LIST <INT>;
+        "MONTHS": <int>[0],
 
-    /// Description of the current reminder.
-    String description;
+        /// List of weeks added to the reminder [1, 8 - 1];
+        /// It is only for weekly reminders.
+        /// [0] if it doesn't has weeks.
+        /// LIST <INT>;
+        "WEEKS": <int>[0],
 
+        /// List of days added to the reminder [1, 32 - 1];
+        /// It is not for weekly reminders.
+        /// Not-Nullable; default value = [1].
+        /// LIST <INT>;
+        "DAYS": <int>[1],
 
-    // CONSTRUCTOR //
-    AppProvider
-    ({
-        this.reminderID = "0000",
-        this.reminderKind = 1,
-        this.description = ""
-    });
+        /// Amount of times the reminder will notify.
+        /// Not-Nullable; default value = 1.
+        /// INT;
+        "TIMES": 1,
 
+        /// Hours between reminders notification.
+        /// Not-Nullable; default value = 1.
+        /// INT;
+        "GAP": 1,
+
+        /// Hour of the first notification [0, 24 - 1]
+        /// Not-Nullable; default value = 8.
+        /// INT;
+        "HOUR": 8,
+
+        /// Minute of the first notification [0, 60 - 1]
+        /// Not-Nullable; default value = 00.
+        /// INT;
+        "MINUTE": 0,
+
+        /// List of special months exception [ 29 || 30 || 31 ]
+        /// It is only for yearly reminders.
+        /// If it has [29], it will notify on February's 29th.
+        /// If it has [30], it will notify on March's 1st.
+        /// If it has [31], it will notify on the first day
+        /// of months next to 30 days months.
+        /// [0] if it doesn't has exceptions.
+        /// LIST <INT>
+        "EXCEPCTIONS": <int>[0],
+        
+
+        /// If the reminder is paused [true || false]
+        /// Not-Nullable, default value = false.
+        /// BOOLEAN;
+        "ISPAUSED": false
+    };
 
     // METHODS //
     void resetRemiderValues()
     {
-        reminderID = "0000";
-        reminderKind = 1;
-        description = "";
+
     }
 }

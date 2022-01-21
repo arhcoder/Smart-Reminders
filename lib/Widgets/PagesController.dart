@@ -30,7 +30,7 @@ class PagesControllerState extends State <PagesController>
         int amountPage = Provider.of<PagesProvider>(context, listen: false).pageAmountIndex;
 
         /// Reminder Kind from AppProvider.
-        int reminderKind = Provider.of<AppProvider>(context, listen: false).reminderKind;
+        int reminderKind = Provider.of<AppProvider>(context, listen: false).REMINDER["KIND"];
 
         /// Navigation guide from PagesProvider.
         List <int> navigationGuide = Provider.of<PagesProvider>(context, listen: false)
