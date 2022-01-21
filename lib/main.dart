@@ -11,7 +11,7 @@ import 'generated/l10n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'Screens/HomeScreen.dart';
-import 'Screens/ProgramScreen.dart';
+import 'Screens/ProgrammingScreen.dart';
 import 'Screens/ReminderScreen.dart';
 import 'Screens/InfoScreen.dart';
 
