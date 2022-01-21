@@ -26,9 +26,15 @@ class ProgrammingPanelState extends State <ProgrammingPanel>
 {
     // Attributes //
     PageController pageController = PageController(initialPage: 0);
-    String currentTitle = "Frecuencia";
+    String currentTitle = "";
 
     // Methods //
+    void setCurrentTitle()
+    {
+        currentTitle = Provider.of<PagesProvider>(context, listen: false)
+        .programmingScreenTitulars[Provider.of<PagesProvider>(context, listen: false).pageIndex];
+        setState((){});
+    }
     void changePage()
     {
         pageController.animateToPage(
@@ -36,12 +42,16 @@ class ProgrammingPanelState extends State <ProgrammingPanel>
             curve: Curves.ease,
             duration: const Duration(milliseconds: 488)
         );
+        setCurrentTitle();
         setState((){});
     }
 
     @override
     Widget build(BuildContext context)
     {
+        // Init title setting //
+        setCurrentTitle();
+
         return Container
         (
             width: double.infinity,

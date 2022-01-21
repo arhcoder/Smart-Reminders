@@ -1,9 +1,19 @@
 import 'package:flutter/material.dart';
 
+import 'package:smart_reminders/generated/l10n.dart';
+
 class PagesProvider extends ChangeNotifier
 {
     // Attributes //
     int pageIndex;
+    List <String> programmingScreenTitulars =
+    [
+        S.current.program_titular_frecuency,
+        S.current.program_titular_months,
+        S.current.program_titular_weeks,
+        S.current.program_titular_days,
+        S.current.program_titular_hours
+    ];
 
     // Constructor //
     PagesProvider({this.pageIndex = 0});
