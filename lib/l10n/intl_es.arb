@@ -1,6 +1,20 @@
 {
     "info": "Más información",
 
+    "january": "Enero",
+    "february": "Febrero",
+    "march": "Marzo",
+    "april": "Abril",
+    "may": "Mayo",
+    "june": "Junio",
+    "july": "Julio",
+    "august": "Agosto",
+    "september": "Septiembre",
+    "october": "Octubre",
+    "november": "Noviembre",
+    "december": "Diciembre",
+
+
     "home_titular": "MIS RECORDATORIOS",
     "home_empty": "No ha creado ningún recordatorio",
     "home_add": "Crear nuevo recordatorio",
@@ -35,13 +49,13 @@
     "program_month_12": "DIC",
 
     "program_titular_weeks": "Selecciona los días",
-    "program_week_01": "LUNES",
-    "program_week_02": "MARTES",
-    "program_week_03": "MIÉRCOLES",
-    "program_week_04": "JUEVES",
-    "program_week_05": "VIERNES",
-    "program_week_06": "SÁBADOS",
-    "program_week_07": "DOMINGOS",
+    "program_week_01": "Lunes",
+    "program_week_02": "Martes",
+    "program_week_03": "Miércoles",
+    "program_week_04": "Jueves",
+    "program_week_05": "Viernes",
+    "program_week_06": "Sábados",
+    "program_week_07": "Domingos",
 
     "program_titular_days": "Selecciona los días",
 
@@ -55,12 +69,12 @@
 
 
     "reminder_titular": "Mi recordatorio",
-    "reminder_yearly_months_message": "{emoji} Todos los meses {months}.",
-    "reminder_yearly_weekly_message": "{emoji} Todos los días {weekDays}.",
-    "reminder_yearly_daily_message": "{emoji} Todos los días {days}.",
-    "reminder_yearly_monthly_message": "{emoji} Todos los días {days} del mes.",
-    "reminder_yearly_days_message": "{emoji} Los días {days}.",
-    "reminder_yearly_hours_message": "{emoji} {times} veces, a partir de las {hour} hours, cada {each} horas.",
+    "reminder_description_message": " se recordará:",
+    "reminder_yearly_months_message": "{emoji} Los meses ",
+    "reminder_days_message": "{emoji} Los días ",
+    "reminder_monthly_months_message": "{emoji} De cada mes, los días ",
+    "reminder_daily_days_message": "{emoji} Todos los días.",
+    "reminder_hours_message": "{emoji} {times} veces, a partir de las {hour} horas, cada {each} horas.",
     "reminder_ok_button": "¡Entendido!",
     "reminder_delete_button": "Borrar",
     "reminder_pause_button": "Pausar",

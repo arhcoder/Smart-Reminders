@@ -49,7 +49,7 @@ class AppProvider extends ChangeNotifier
         /// Hours between reminders notification.
         /// Not-Nullable; default value = 1.
         /// INT;
-        "GAP": 1,
+        "EACH": 1,
 
         /// Hour of the first notification [0, 24 - 1]
         /// Not-Nullable; default value = 8.
@@ -69,7 +69,7 @@ class AppProvider extends ChangeNotifier
         /// of months next to 30 days months.
         /// [0] if it doesn't has exceptions.
         /// LIST <INT>
-        "EXCEPCTIONS": <int>[0],
+        "EXCEPTIONS": <int>[0],
         
 
         /// If the reminder is paused [true || false]
@@ -78,7 +78,26 @@ class AppProvider extends ChangeNotifier
         "ISPAUSED": false
     };
 
+    // CONSTRUCTOR //
+    AppProvider()
+    {
+        tempGiveReminderValues();
+    }
+
     // METHODS //
+    void tempGiveReminderValues()
+    {
+        REMINDER["ID"] = 1;
+        REMINDER["KIND"] = 1;
+        REMINDER["DESCRIPTION"] = "Pagar la luz a Veolia";
+        REMINDER["MONTHS"] = [1, 2, 3, 5];
+        REMINDER["WEEKS"] = [1, 3, 5];
+        REMINDER["DAYS"] = [1, 2, 3, 4, 8, 10, 12, 14, 16, 18, 24, 28];
+        REMINDER["TIMES"] = 4;
+        REMINDER["EACH"] = 2;
+        REMINDER["HOUR"] = 8;
+        REMINDER["MINUTE"] = 0;
+    }
     void resetRemiderValues()
     {
 

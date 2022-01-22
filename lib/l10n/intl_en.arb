@@ -1,6 +1,20 @@
 {
     "info": "More information",
 
+    "january": "January",
+    "february": "February",
+    "march": "March",
+    "april": "April",
+    "may": "May",
+    "june": "June",
+    "july": "July",
+    "august": "August",
+    "september": "September",
+    "october": "October",
+    "november": "November",
+    "december": "December",
+
+
     "home_titular": "MY REMINDERS",
     "home_empty": "You have not created any reminder",
     "home_add": "Create new reminder",
@@ -35,13 +49,13 @@
     "program_month_12": "DEC",
 
     "program_titular_weeks": "Choose the days",
-    "program_week_01": "MONDAYS",
-    "program_week_02": "TUESDAYS",
-    "program_week_03": "WEDNESDAYS",
-    "program_week_04": "THURSDAYS",
-    "program_week_05": "FRIDAYS",
-    "program_week_06": "SATURDAYS",
-    "program_week_07": "SUNDAYS",
+    "program_week_01": "Mondays",
+    "program_week_02": "Tuesdays",
+    "program_week_03": "Wednesdays",
+    "program_week_04": "Thursdays",
+    "program_week_05": "Fridays",
+    "program_week_06": "Saturdays",
+    "program_week_07": "Sundays",
 
     "program_titular_days": "Choose the days",
 
@@ -55,12 +69,12 @@
 
 
     "reminder_titular": "My reminder",
-    "reminder_yearly_months_message": "{emoji} Every {months}.",
-    "reminder_yearly_weekly_message": "{emoji} Every {weekDays}.",
-    "reminder_yearly_daily_message": "{emoji} Every {days}.",
-    "reminder_yearly_monthly_message": "{emoji} Every {days} of the month",
-    "reminder_yearly_days_message": "{emoji} On days {days}.",
-    "reminder_yearly_hours_message": "{emoji} {times} times, from {hour} hours, each {each} hours",
+    "reminder_description_message": " will notify:",
+    "reminder_yearly_months_message": "{emoji} Every ",
+    "reminder_days_message": "{emoji} Every ",
+    "reminder_monthly_months_message": "{emoji}For each month, every ",
+    "reminder_daily_days_message": "{emoji} Everyday.",
+    "reminder_hours_message": "{emoji} {times} times, from {hour} hours, each {each} hours",
     "reminder_ok_button": "Got it!",
     "reminder_delete_button": "Delete",
     "reminder_pause_button": "Pause",

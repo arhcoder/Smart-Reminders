@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:smart_reminders/Theme/Theme.dart';
 import 'package:smart_reminders/Responsive/Responsive.dart';
 
-class Reminder extends StatelessWidget
+class ReminderCard extends StatelessWidget
 {
-    const Reminder({Key? key}) : super(key: key);
+    const ReminderCard({Key? key}) : super(key: key);
 
     @override
     Widget build(BuildContext context)
@@ -21,11 +21,11 @@ class Reminder extends StatelessWidget
             (
                 children:
                 [
-                    const SizedBox(height: Responsive.remindersMargin),
+                    const SizedBox(height: Responsive.remindersCardMargin),
                     Container
                     (
                         width: double.infinity,
-                        height: Responsive.remindersHeight,
+                        height: Responsive.remindersCardHeight,
 
                         decoration: BoxDecoration
                         (

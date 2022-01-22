@@ -45,6 +45,126 @@ class S {
     );
   }
 
+  /// `January`
+  String get january {
+    return Intl.message(
+      'January',
+      name: 'january',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `February`
+  String get february {
+    return Intl.message(
+      'February',
+      name: 'february',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `March`
+  String get march {
+    return Intl.message(
+      'March',
+      name: 'march',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `April`
+  String get april {
+    return Intl.message(
+      'April',
+      name: 'april',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `May`
+  String get may {
+    return Intl.message(
+      'May',
+      name: 'may',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `June`
+  String get june {
+    return Intl.message(
+      'June',
+      name: 'june',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `July`
+  String get july {
+    return Intl.message(
+      'July',
+      name: 'july',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `August`
+  String get august {
+    return Intl.message(
+      'August',
+      name: 'august',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `September`
+  String get september {
+    return Intl.message(
+      'September',
+      name: 'september',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `October`
+  String get october {
+    return Intl.message(
+      'October',
+      name: 'october',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `November`
+  String get november {
+    return Intl.message(
+      'November',
+      name: 'november',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `December`
+  String get december {
+    return Intl.message(
+      'December',
+      name: 'december',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `MY REMINDERS`
   String get home_titular {
     return Intl.message(
@@ -335,70 +455,70 @@ class S {
     );
   }
 
-  /// `MONDAYS`
+  /// `Mondays`
   String get program_week_01 {
     return Intl.message(
-      'MONDAYS',
+      'Mondays',
       name: 'program_week_01',
       desc: '',
       args: [],
     );
   }
 
-  /// `TUESDAYS`
+  /// `Tuesdays`
   String get program_week_02 {
     return Intl.message(
-      'TUESDAYS',
+      'Tuesdays',
       name: 'program_week_02',
       desc: '',
       args: [],
     );
   }
 
-  /// `WEDNESDAYS`
+  /// `Wednesdays`
   String get program_week_03 {
     return Intl.message(
-      'WEDNESDAYS',
+      'Wednesdays',
       name: 'program_week_03',
       desc: '',
       args: [],
     );
   }
 
-  /// `THURSDAYS`
+  /// `Thursdays`
   String get program_week_04 {
     return Intl.message(
-      'THURSDAYS',
+      'Thursdays',
       name: 'program_week_04',
       desc: '',
       args: [],
     );
   }
 
-  /// `FRIDAYS`
+  /// `Fridays`
   String get program_week_05 {
     return Intl.message(
-      'FRIDAYS',
+      'Fridays',
       name: 'program_week_05',
       desc: '',
       args: [],
     );
   }
 
-  /// `SATURDAYS`
+  /// `Saturdays`
   String get program_week_06 {
     return Intl.message(
-      'SATURDAYS',
+      'Saturdays',
       name: 'program_week_06',
       desc: '',
       args: [],
     );
   }
 
-  /// `SUNDAYS`
+  /// `Sundays`
   String get program_week_07 {
     return Intl.message(
-      'SUNDAYS',
+      'Sundays',
       name: 'program_week_07',
       desc: '',
       args: [],
@@ -495,61 +615,61 @@ class S {
     );
   }
 
-  /// `{emoji} Every {months}.`
-  String reminder_yearly_months_message(Object emoji, Object months) {
+  /// ` will notify:`
+  String get reminder_description_message {
     return Intl.message(
-      '$emoji Every $months.',
+      ' will notify:',
+      name: 'reminder_description_message',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `{emoji} Every `
+  String reminder_yearly_months_message(Object emoji) {
+    return Intl.message(
+      '$emoji Every ',
       name: 'reminder_yearly_months_message',
       desc: '',
-      args: [emoji, months],
+      args: [emoji],
     );
   }
 
-  /// `{emoji} Every {weekDays}.`
-  String reminder_yearly_weekly_message(Object emoji, Object weekDays) {
+  /// `{emoji} Every `
+  String reminder_days_message(Object emoji) {
     return Intl.message(
-      '$emoji Every $weekDays.',
-      name: 'reminder_yearly_weekly_message',
+      '$emoji Every ',
+      name: 'reminder_days_message',
       desc: '',
-      args: [emoji, weekDays],
+      args: [emoji],
     );
   }
 
-  /// `{emoji} Every {days}.`
-  String reminder_yearly_daily_message(Object emoji, Object days) {
+  /// `{emoji}For each month, every `
+  String reminder_monthly_months_message(Object emoji) {
     return Intl.message(
-      '$emoji Every $days.',
-      name: 'reminder_yearly_daily_message',
+      '${emoji}For each month, every ',
+      name: 'reminder_monthly_months_message',
       desc: '',
-      args: [emoji, days],
+      args: [emoji],
     );
   }
 
-  /// `{emoji} Every {days} of the month`
-  String reminder_yearly_monthly_message(Object emoji, Object days) {
+  /// `{emoji} Everyday.`
+  String reminder_daily_days_message(Object emoji) {
     return Intl.message(
-      '$emoji Every $days of the month',
-      name: 'reminder_yearly_monthly_message',
+      '$emoji Everyday.',
+      name: 'reminder_daily_days_message',
       desc: '',
-      args: [emoji, days],
-    );
-  }
-
-  /// `{emoji} On days {days}.`
-  String reminder_yearly_days_message(Object emoji, Object days) {
-    return Intl.message(
-      '$emoji On days $days.',
-      name: 'reminder_yearly_days_message',
-      desc: '',
-      args: [emoji, days],
+      args: [emoji],
     );
   }
 
   /// `{emoji} {times} times, from {hour} hours, each {each} hours`
-  String reminder_yearly_hours_message(Object emoji, Object times, Object hour, Object each) {
+  String reminder_hours_message(Object emoji, Object times, Object hour, Object each) {
     return Intl.message(
       '$emoji $times times, from $hour hours, each $each hours',
-      name: 'reminder_yearly_hours_message',
+      name: 'reminder_hours_message',
       desc: '',
       args: [emoji, times, hour, each],
     );

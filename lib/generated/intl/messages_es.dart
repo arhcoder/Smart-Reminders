@@ -19,24 +19,33 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'es';
 
-  static m0(emoji, days) => "${emoji} Todos los días ${days}.";
+  static m0(emoji) => "${emoji} Todos los días.";
 
-  static m1(emoji, days) => "${emoji} Los días ${days}.";
+  static m1(emoji) => "${emoji} Los días ";
 
-  static m2(emoji, times, hour, each) => "${emoji} ${times} veces, a partir de las ${hour} hours, cada ${each} horas.";
+  static m2(emoji, times, hour, each) => "${emoji} ${times} veces, a partir de las ${hour} horas, cada ${each} horas.";
 
-  static m3(emoji, days) => "${emoji} Todos los días ${days} del mes.";
+  static m3(emoji) => "${emoji} De cada mes, los días ";
 
-  static m4(emoji, months) => "${emoji} Todos los meses ${months}.";
-
-  static m5(emoji, weekDays) => "${emoji} Todos los días ${weekDays}.";
+  static m4(emoji) => "${emoji} Los meses ";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
+    "april" : MessageLookupByLibrary.simpleMessage("Abril"),
+    "august" : MessageLookupByLibrary.simpleMessage("Agosto"),
+    "december" : MessageLookupByLibrary.simpleMessage("Diciembre"),
+    "february" : MessageLookupByLibrary.simpleMessage("Febrero"),
     "home_add" : MessageLookupByLibrary.simpleMessage("Crear nuevo recordatorio"),
     "home_empty" : MessageLookupByLibrary.simpleMessage("No ha creado ningún recordatorio"),
     "home_titular" : MessageLookupByLibrary.simpleMessage("MIS RECORDATORIOS"),
     "info" : MessageLookupByLibrary.simpleMessage("Más información"),
+    "january" : MessageLookupByLibrary.simpleMessage("Enero"),
+    "july" : MessageLookupByLibrary.simpleMessage("Julio"),
+    "june" : MessageLookupByLibrary.simpleMessage("Junio"),
+    "march" : MessageLookupByLibrary.simpleMessage("Marzo"),
+    "may" : MessageLookupByLibrary.simpleMessage("Mayo"),
+    "november" : MessageLookupByLibrary.simpleMessage("Noviembre"),
+    "october" : MessageLookupByLibrary.simpleMessage("Octubre"),
     "program_description_hint" : MessageLookupByLibrary.simpleMessage("Descripción del recordatorio..."),
     "program_each_01" : MessageLookupByLibrary.simpleMessage("Cada"),
     "program_each_02" : MessageLookupByLibrary.simpleMessage("horas;"),
@@ -71,23 +80,24 @@ class MessageLookup extends MessageLookupByLibrary {
     "program_titular_hours" : MessageLookupByLibrary.simpleMessage("Selecciona las horas"),
     "program_titular_months" : MessageLookupByLibrary.simpleMessage("Selecciona los meses"),
     "program_titular_weeks" : MessageLookupByLibrary.simpleMessage("Selecciona los días"),
-    "program_week_01" : MessageLookupByLibrary.simpleMessage("LUNES"),
-    "program_week_02" : MessageLookupByLibrary.simpleMessage("MARTES"),
-    "program_week_03" : MessageLookupByLibrary.simpleMessage("MIÉRCOLES"),
-    "program_week_04" : MessageLookupByLibrary.simpleMessage("JUEVES"),
-    "program_week_05" : MessageLookupByLibrary.simpleMessage("VIERNES"),
-    "program_week_06" : MessageLookupByLibrary.simpleMessage("SÁBADOS"),
-    "program_week_07" : MessageLookupByLibrary.simpleMessage("DOMINGOS"),
+    "program_week_01" : MessageLookupByLibrary.simpleMessage("Lunes"),
+    "program_week_02" : MessageLookupByLibrary.simpleMessage("Martes"),
+    "program_week_03" : MessageLookupByLibrary.simpleMessage("Miércoles"),
+    "program_week_04" : MessageLookupByLibrary.simpleMessage("Jueves"),
+    "program_week_05" : MessageLookupByLibrary.simpleMessage("Viernes"),
+    "program_week_06" : MessageLookupByLibrary.simpleMessage("Sábados"),
+    "program_week_07" : MessageLookupByLibrary.simpleMessage("Domingos"),
+    "reminder_daily_days_message" : m0,
+    "reminder_days_message" : m1,
     "reminder_delete_button" : MessageLookupByLibrary.simpleMessage("Borrar"),
+    "reminder_description_message" : MessageLookupByLibrary.simpleMessage(" se recordará:"),
     "reminder_edit_button" : MessageLookupByLibrary.simpleMessage("Editar"),
+    "reminder_hours_message" : m2,
+    "reminder_monthly_months_message" : m3,
     "reminder_ok_button" : MessageLookupByLibrary.simpleMessage("¡Entendido!"),
     "reminder_pause_button" : MessageLookupByLibrary.simpleMessage("Pausar"),
     "reminder_titular" : MessageLookupByLibrary.simpleMessage("Mi recordatorio"),
-    "reminder_yearly_daily_message" : m0,
-    "reminder_yearly_days_message" : m1,
-    "reminder_yearly_hours_message" : m2,
-    "reminder_yearly_monthly_message" : m3,
     "reminder_yearly_months_message" : m4,
-    "reminder_yearly_weekly_message" : m5
+    "september" : MessageLookupByLibrary.simpleMessage("Septiembre")
   };
 }

@@ -6,6 +6,7 @@ import 'package:smart_reminders/Theme/Theme.dart';
 import 'package:smart_reminders/Responsive/Responsive.dart';
 
 import 'package:smart_reminders/Widgets/Titular.dart';
+import 'package:smart_reminders/Widgets/ReminderBox.dart';
 
 class ReminderScreen extends StatelessWidget
 {
@@ -25,34 +26,20 @@ class ReminderScreen extends StatelessWidget
 
                 children:
                 [
+                    // Reminder titular //
+                    const SizedBox(height: Responsive.appVerticalPadding - Responsive.twentyConstant / 2),
                     Padding
                     (
                         padding: const EdgeInsets.symmetric(horizontal: Responsive.appHorizontalPadding),
                         child: Titular(title: S.current.reminder_titular)
                     ),
-                    const SizedBox(height: Responsive.appVerticalPadding),
-                    Container
-                    (
-                        width: MediaQuery.of(context).size.width - 2 * Responsive.appHorizontalPadding,
-                        height: MediaQuery.of(context).size.width,
+                    const SizedBox(height: Responsive.appVerticalPadding - Responsive.twentyConstant / 1.4),
 
-                        decoration: BoxDecoration
-                        (
-                            color: AppColors.white,
-                            borderRadius: BorderRadius.circular(20.0),
-                            boxShadow:
-                            [
-                                BoxShadow
-                                (
-                                    color: Colors.grey.withOpacity(0.54),
-                                    offset: const Offset(0, 8),
-                                    blurRadius: 24.0,
-                                    spreadRadius: -6
-                                )
-                            ]
-                        )
-                    ),
-                    const SizedBox(height: Responsive.appVerticalPadding),
+                    // Reminder Box //
+                    const ReminderBox(),
+
+                    // Buttons Panel //
+                    const SizedBox(height: Responsive.appVerticalPadding - Responsive.twentyConstant),
                     Padding
                     (
                         padding: const EdgeInsets.symmetric(horizontal: Responsive.appHorizontalPadding),
@@ -60,14 +47,62 @@ class ReminderScreen extends StatelessWidget
                         (
                             width: double.infinity,
                             height: Responsive.titularHeight,
-                            decoration: BoxDecoration
+                            child: Row
                             (
-                                color: AppColors.main,
-                                borderRadius: BorderRadius.circular(40.0)
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children:
+                                [
+                                    PanelButton
+                                    (
+                                        icon: Icons.delete_outline_rounded,
+                                        onTap: (){print("Delete");}
+                                    ),
+                                    PanelButton
+                                    (
+                                        icon: Icons.pause_rounded,
+                                        onTap: (){print("Pause");}
+                                    ),
+                                    PanelButton
+                                    (
+                                        icon: Icons.edit_outlined,
+                                        onTap: (){print("Edit");}
+                                    ),
+                                ]
                             )
                         )
                     )
                 ]
+            )
+        );
+    }
+}
+
+class PanelButton extends StatelessWidget
+{
+    final IconData icon;
+    final VoidCallback onTap;
+
+    const PanelButton({Key? key, required this.icon, required this.onTap}) : super(key: key);
+
+    @override
+    Widget build(BuildContext context)
+    {
+        return Container
+        (
+            child: GestureDetector
+            (
+                child: Padding
+                (
+                    padding: const EdgeInsets.only(left: 12.0),
+                    child: Icon
+                    (
+                        icon,
+                        color: AppColors.textDark,
+                        size: Responsive.titularHeight * 0.6
+                    )
+                ),
+                onTap: onTap
             )
         );
     }

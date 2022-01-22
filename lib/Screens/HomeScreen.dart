@@ -9,7 +9,7 @@ import 'package:smart_reminders/Providers/PagesProvider.dart';
 
 import 'package:smart_reminders/Widgets/Header.dart';
 import 'package:smart_reminders/Widgets/Titular.dart';
-import 'package:smart_reminders/Widgets/Reminder.dart';
+import 'package:smart_reminders/Widgets/ReminderCard.dart';
 
 class HomeScreen extends StatelessWidget
 {
@@ -44,15 +44,15 @@ class HomeScreen extends StatelessWidget
                             physics: const BouncingScrollPhysics(),
                             children: const
                             [
-                                Reminder(),
-                                Reminder(),
-                                Reminder(),
-                                Reminder(),
-                                Reminder(),
-                                Reminder(),
-                                Reminder(),
-                                Reminder(),
-                                SizedBox(height: Responsive.remindersMargin)
+                                ReminderCard(),
+                                ReminderCard(),
+                                ReminderCard(),
+                                ReminderCard(),
+                                ReminderCard(),
+                                ReminderCard(),
+                                ReminderCard(),
+                                ReminderCard(),
+                                SizedBox(height: Responsive.remindersCardMargin)
                             ]
                         )
                     )
