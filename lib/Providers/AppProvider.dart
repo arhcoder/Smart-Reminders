@@ -10,11 +10,11 @@ class AppProvider extends ChangeNotifier
         /// INT;
         "ID":  1,
 
-        /// Yearly Reminders  = [1];
-        /// Monthly Reminders = [2];
-        /// Weekly Reminders  = [3];
-        /// Daily Reminders   = [4];
-        /// Not-Nullable; default value = [1].
+        /// Yearly Reminders  = 1;
+        /// Monthly Reminders = 2;
+        /// Weekly Reminders  = 3;
+        /// Daily Reminders   = 4;
+        /// Not-Nullable; default value = 1.
         /// INT;
         "KIND": 1,
 
@@ -100,6 +100,17 @@ class AppProvider extends ChangeNotifier
     }
     void resetRemiderValues()
     {
-
+        REMINDER["ID"] = 0;
+        REMINDER["KIND"] = 1;
+        REMINDER["DESCRIPTION"] = "";
+        REMINDER["MONTHS"] = [0];
+        REMINDER["WEEKS"] = [0];
+        REMINDER["DAYS"] = [0];
+        REMINDER["TIMES"] = 0;
+        REMINDER["EACH"] = 0;
+        REMINDER["HOUR"] = 0;
+        REMINDER["MINUTE"] = 0;
+        REMINDER["EXCEPTIONS"] = 0;
+        REMINDER["ISPAUSED"] = false;
     }
 }
