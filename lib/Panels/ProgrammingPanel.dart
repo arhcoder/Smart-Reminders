@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'package:smart_reminders/Responsive/Responsive.dart';
 import 'package:smart_reminders/Providers/PagesProvider.dart';
 
+import 'package:smart_reminders/generated/l10n.dart';
+
 import 'package:smart_reminders/Widgets/Titular.dart';
 
 import 'FrecuencyBlock.dart';
@@ -28,11 +30,19 @@ class ProgrammingPanelState extends State <ProgrammingPanel>
     PageController pageController = PageController(initialPage: 0);
     String currentTitle = "";
 
+    List <String> programmingScreenTitulars =
+    [
+        S.current.program_titular_frecuency,
+        S.current.program_titular_months,
+        S.current.program_titular_weeks,
+        S.current.program_titular_days,
+        S.current.program_titular_hours
+    ];
+
     // Methods //
     void setCurrentTitle()
     {
-        currentTitle = Provider.of<PagesProvider>(context, listen: false)
-        .programmingScreenTitulars[Provider.of<PagesProvider>(context, listen: false).pageIndex];
+        currentTitle = programmingScreenTitulars[Provider.of<PagesProvider>(context, listen: false).pageIndex];
         setState((){});
     }
     void changePage()

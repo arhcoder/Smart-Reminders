@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
-import 'package:smart_reminders/Providers/PagesProvider.dart';
 
 import 'Providers/AppProvider.dart';
+import 'Providers/PagesProvider.dart';
 
 import 'Theme/Theme.dart';
 
@@ -35,6 +35,11 @@ class ReminderApp extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
+        SystemChrome.setPreferredOrientations([
+            DeviceOrientation.portraitUp,
+            DeviceOrientation.portraitDown
+        ]);
+
         return MultiProvider
         (
             child: const MyApp(),
