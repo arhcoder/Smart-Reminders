@@ -83,6 +83,7 @@ class PagesControllerState extends State <PagesController>
                         child: (Provider.of<PagesProvider>(context, listen: false).pageIndex == 0)
                         ? FloatingActionButton
                         (
+                            // heroTag: "tag",
                             backgroundColor: AppColors.secundary,
                             child: const Icon(Icons.close_rounded, size: Responsive.appIconSize - 6.0),
                             onPressed: (){Navigator.of(context).pop();}
@@ -165,8 +166,8 @@ class ArrowButton extends StatelessWidget
             child: Icon
             (
                 (isBackArrow)
-                ? Icons.arrow_back
-                : Icons.arrow_forward,
+                ? Icons.arrow_back_rounded
+                : Icons.arrow_forward_rounded,
                 size: Responsive.appIconSize - 6.0
             ),
             heroTag: null,

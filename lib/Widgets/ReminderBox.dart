@@ -8,6 +8,7 @@ import 'package:smart_reminders/Responsive/Responsive.dart';
 import 'package:smart_reminders/Providers/AppProvider.dart';
 
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ReminderBox extends StatelessWidget
 {
@@ -48,7 +49,7 @@ class ReminderBox extends StatelessWidget
                     Container
                     (
                         // color: Colors.red,
-                        height: Responsive.remindersBoxPadding + Responsive.remindersBoxIconSize,
+                        height: Responsive.remindersBoxPadding + Responsive.remindersBoxIconSize + 2.0,
                         child: Row
                         (
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -58,10 +59,14 @@ class ReminderBox extends StatelessWidget
                                 // Icon //
                                 Container
                                 (
-                                    width: Responsive.remindersBoxIconSize,
-                                    height: Responsive.remindersBoxIconSize,
-                                    margin: const EdgeInsets.only(left: Responsive.remindersBoxPadding),
-                                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), color: Colors.blue),
+                                    width: Responsive.remindersBoxIconSize - Responsive.twentyConstant * 0.2,
+                                    height: Responsive.remindersBoxIconSize - Responsive.twentyConstant * 0.2,
+                                    margin: const EdgeInsets.only(left: Responsive.remindersBoxPadding, bottom: 2.0),
+                                    child:
+                                    (reminderKind == 1)? SvgPicture.asset("assets/icons/yearly_outlined.svg"):
+                                    (reminderKind == 2)? SvgPicture.asset("assets/icons/monthly_outlined.svg"):
+                                    (reminderKind == 3)? SvgPicture.asset("assets/icons/weekly_outlined.svg"):
+                                    SvgPicture.asset("assets/icons/daily_outlined.svg"),
                                 ),
 
                                 // Reminder Kind //
@@ -71,8 +76,8 @@ class ReminderBox extends StatelessWidget
                                     (
                                         alignment: Alignment.centerLeft,
                                         margin: const EdgeInsets.only(
-                                            top: Responsive.remindersBoxPadding + 2.8,
-                                            left: Responsive.remindersBoxPadding * 0.8
+                                            top: Responsive.remindersBoxPadding + 8 - 0.2,
+                                            left: Responsive.remindersBoxPadding * 0.60
                                         ),
                                         child: AutoSizeText
                                         (
@@ -84,7 +89,7 @@ class ReminderBox extends StatelessWidget
 
                                             style: const TextStyle
                                             (
-                                                fontFamily: "Gotham Bold",
+                                                fontFamily: "Gotham Medium",
                                                 color: AppColors.secundary,
                                                 fontSize: Responsive.twentyConstant - 1
                                             )
@@ -102,7 +107,7 @@ class ReminderBox extends StatelessWidget
                         (
                             // color: Colors.red,
                             padding: const EdgeInsets.only(
-                                top: Responsive.remindersBoxPadding - Responsive.twentyConstant / 2 - 1.0,
+                                top: Responsive.remindersBoxPadding - Responsive.twentyConstant / 2 - 4.0,
                                 left: Responsive.remindersBoxPadding + 2.0,
                                 right: Responsive.remindersBoxPadding + 2.0,
                                 bottom: Responsive.remindersBoxPadding - Responsive.twentyConstant,
@@ -153,12 +158,13 @@ class ReminderBox extends StatelessWidget
 
                         child: FloatingActionButton
                         (
-                            
+                            // heroTag: "tag",
                             backgroundColor: AppColors.secundary,
                             child: const Icon(Icons.check, size: Responsive.appIconSize - 4.0),
                             onPressed: ()
                             {
-                                Navigator.of(context).popAndPushNamed("/home");
+                                Navigator.of(context).pop();
+                                Provider.of<AppProvider>(context, listen: false).resetReminderValues();
                             }
                         )
                     )

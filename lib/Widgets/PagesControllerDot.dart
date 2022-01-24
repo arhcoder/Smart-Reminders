@@ -19,7 +19,7 @@ class PagesControllerDot extends StatelessWidget
         return Container
         (
             width: (state == 3)
-            ? Responsive.pagesControllerDotSize - 2.80
+            ? Responsive.pagesControllerDotSize - 2.0
             : Responsive.pagesControllerDotSize,
             decoration:
             (state == 1)? const BoxDecoration

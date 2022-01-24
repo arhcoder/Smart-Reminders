@@ -35,9 +35,15 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   
-  # assets:
-  #  - assets/icon/icon.svg
-  #  - assets/images/image.png
+  assets:
+    - assets/icons/yearly_filled.svg
+    - assets/icons/yearly_outlined.svg
+    - assets/icons/monthly_filled.svg
+    - assets/icons/monthly_outlined.svg
+    - assets/icons/weekly_filled.svg
+    - assets/icons/weekly_outlined.svg
+    - assets/icons/daily_filled.svg
+    - assets/icons/daily_outlined.svg
 
   fonts:
     - family: Gotham Book

@@ -5,6 +5,7 @@ import 'package:smart_reminders/generated/l10n.dart';
 
 import 'package:smart_reminders/Theme/Theme.dart';
 import 'package:smart_reminders/Responsive/Responsive.dart';
+import 'package:smart_reminders/Providers/AppProvider.dart';
 import 'package:smart_reminders/Providers/PagesProvider.dart';
 
 import 'package:smart_reminders/Widgets/Header.dart';
@@ -63,7 +64,7 @@ class HomeScreen extends StatelessWidget
             (
                 padding: const EdgeInsets.only(
                     right: Responsive.appHorizontalPadding - 32.0,
-                    bottom: Responsive.appVerticalPadding - 52.0
+                    bottom: Responsive.appVerticalPadding - 42.0
                 ),
                 child: FloatingActionButton
                 (
@@ -72,6 +73,7 @@ class HomeScreen extends StatelessWidget
                     tooltip: S.current.home_add,
                     onPressed: ()
                     {
+                        Provider.of<AppProvider>(context, listen: false).resetReminderValues();
                         Provider.of<PagesProvider>(context, listen: false).newPage();
                         Navigator.of(context).pushNamed("/program");
                     }

@@ -98,8 +98,9 @@ class AppProvider extends ChangeNotifier
         REMINDER["HOUR"] = 8;
         REMINDER["MINUTE"] = 0;
     }
-    void resetRemiderValues()
+    void resetReminderValues()
     {
+        /*
         REMINDER["ID"] = 0;
         REMINDER["KIND"] = 1;
         REMINDER["DESCRIPTION"] = "";
@@ -112,5 +113,6 @@ class AppProvider extends ChangeNotifier
         REMINDER["MINUTE"] = 0;
         REMINDER["EXCEPTIONS"] = 0;
         REMINDER["ISPAUSED"] = false;
+        */
     }
 }
