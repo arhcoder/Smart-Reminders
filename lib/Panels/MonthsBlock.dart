@@ -10,8 +10,6 @@ import 'package:smart_reminders/generated/l10n.dart';
 import 'package:smart_reminders/Widgets/Block.dart';
 import 'package:smart_reminders/Widgets/CalendarButton.dart';
 
-import 'package:smart_reminders/Widgets/Block.dart';
-
 class MonthsBlock extends StatelessWidget
 {
     const MonthsBlock({Key? key}) : super(key: key);
@@ -32,7 +30,7 @@ class MonthsBlock extends StatelessWidget
         /// selection value.
         List <bool> selectedButtons = List.filled(12, false);
 
-        // Activa los botones según los meses seleccionados.
+        // Activates the buttons according to the selected months.
         for (int i = 0; i < monthsOnTheProvider.length; i++)
         {
             if (monthsOnTheProvider[i] != 0)
