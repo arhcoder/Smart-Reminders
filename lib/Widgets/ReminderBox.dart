@@ -17,7 +17,7 @@ class ReminderBox extends StatelessWidget
     @override
     Widget build(BuildContext context)
     {
-        int reminderKind = Provider.of<AppProvider>(context).REMINDER["KIND"];
+        int reminderKind = Provider.of<AppProvider>(context, listen: false).REMINDER["KIND"];
         ScrollController scrollController = ScrollController(initialScrollOffset: 0.0);
 
         return Container
@@ -160,7 +160,7 @@ class ReminderBox extends StatelessWidget
                         (
                             // heroTag: "tag",
                             backgroundColor: AppColors.secundary,
-                            child: const Icon(Icons.check, size: Responsive.appIconSize - 4.0),
+                            child: const Icon(Icons.check_rounded, size: Responsive.appIconSize - 4.0),
                             onPressed: ()
                             {
                                 Navigator.of(context).pop();

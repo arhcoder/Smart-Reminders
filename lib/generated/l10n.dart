@@ -20,7 +20,7 @@ class S {
   static const AppLocalizationDelegate delegate =
     AppLocalizationDelegate();
 
-  static Future<S> load(Locale locale) {
+  static Future <S> load(Locale locale) {
     final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
     final localeName = Intl.canonicalizedLocale(name); 
     return initializeMessages(localeName).then((_) {
@@ -31,7 +31,7 @@ class S {
     });
   } 
 
-  static S? of(BuildContext context) {
+static S? of(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
 

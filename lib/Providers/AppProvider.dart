@@ -85,18 +85,57 @@ class AppProvider extends ChangeNotifier
     }
 
     // METHODS //
+    void insertListsData(String key, int data)
+    {
+        if (key == "KIND")
+        {
+            REMINDER[key] = data;
+        }
+        else if (key == "MONTHS" || key == "WEEKS" || key == "DAYS")
+        {
+            if (REMINDER[key].contains(data)){}
+            else {REMINDER[key].add(data);}
+        }
+        else
+        {
+            print("Error trying to adding data into the AppProvider REMINDER[$key].\nThe key $key is not defined.");
+        }
+        print(REMINDER[key]);
+    }
+    void removeListsData(String key, int data)
+    {
+        if (key == "KIND")
+        {
+            REMINDER[key] = data;
+        }
+        else if (key == "MONTHS" || key == "WEEKS" || key == "DAYS")
+        {
+            if (REMINDER[key].contains(data)){REMINDER[key].remove(data);}
+        }
+        else
+        {
+            print("Error trying to removing data into the AppProvider REMINDER[$key].\nThe key $key is not defined.");
+        }
+        print(REMINDER[key]);
+    }
     void tempGiveReminderValues()
     {
         REMINDER["ID"] = 1;
         REMINDER["KIND"] = 1;
         REMINDER["DESCRIPTION"] = "Pagar la luz a Veolia";
-        REMINDER["MONTHS"] = [1, 2, 3, 5];
+        REMINDER["MONTHS"] = [1, 2, 8, 12];
         REMINDER["WEEKS"] = [1, 3, 5];
         REMINDER["DAYS"] = [1, 2, 3, 4, 8, 10, 12, 14, 16, 18, 24, 28];
         REMINDER["TIMES"] = 4;
         REMINDER["EACH"] = 2;
         REMINDER["HOUR"] = 8;
         REMINDER["MINUTE"] = 0;
+    }
+    void orderReminderListValues()
+    {
+        REMINDER["MONTHS"].sort();
+        REMINDER["WEEKS"].sort();
+        REMINDER["DAYS"].sort();
     }
     void resetReminderValues()
     {

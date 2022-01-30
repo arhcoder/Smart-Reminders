@@ -19,7 +19,9 @@ class Block extends StatelessWidget
                 width: MediaQuery.of(context).size.width - 2 * Responsive.appHorizontalPadding,
                 height: MediaQuery.of(context).size.width - 2 * Responsive.appHorizontalPadding + 60.0,
 
-                decoration: BoxDecoration
+                clipBehavior: Clip.none,
+
+                /*decoration: BoxDecoration
                 (
                     color: AppColors.box,
                     borderRadius: BorderRadius.circular(20.0),
@@ -33,7 +35,7 @@ class Block extends StatelessWidget
                             spreadRadius: -6
                         )
                     ]
-                ),
+                ),*/
 
                 child: child
             )

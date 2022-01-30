@@ -9,7 +9,7 @@ import 'package:smart_reminders/generated/l10n.dart';
 import 'package:smart_reminders/Widgets/Titular.dart';
 
 import 'FrecuencyBlock.dart';
-import 'MonthBlock.dart';
+import 'MonthsBlock.dart';
 import 'WeekBlock.dart';
 import 'DaysBlock.dart';
 import 'HoursBlock.dart';
@@ -120,7 +120,7 @@ class ProgrammingPanelState extends State <ProgrammingPanel>
                                             children: const
                                             [
                                                 FrecuencyBlock(),
-                                                MonthBlock(),
+                                                MonthsBlock(),
                                                 WeekBlock(),
                                                 DaysBlock(),
                                                 HoursBlock()

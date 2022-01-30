@@ -131,7 +131,7 @@ class PagesControllerState extends State <PagesController>
                         ? FloatingActionButton
                         (
                             backgroundColor: AppColors.secundary,
-                            child: const Icon(Icons.check, size: Responsive.appIconSize - 6.0),
+                            child: const Icon(Icons.check_rounded, size: Responsive.appIconSize - 6.0),
                             onPressed: (){Navigator.of(context).popAndPushNamed("/reminder");}
                         )
                         : ArrowButton
