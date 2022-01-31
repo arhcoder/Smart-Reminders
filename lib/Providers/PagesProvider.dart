@@ -51,11 +51,11 @@ class PagesProvider extends ChangeNotifier
     {
         switch (reminderKind)
         {
-            case 1: return [1, 2, 3, 4, 5];
+            case 1: return [1, 2, 4, 5];
             case 2: return [1, 4, 5];
             case 3: return [1, 3, 5];
             case 4: return [1, 5];
-            default: return [1, 2, 3, 4, 5];
+            default: return [1, 2, 4, 5];
         }
     }
 
