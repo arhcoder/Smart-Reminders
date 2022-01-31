@@ -23,7 +23,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m1(emoji) => "${emoji} Every ";
 
-  static m2(emoji, times, hour, each) => "${emoji} ${times} times, from ${hour} hours, each ${each} hours";
+  static m2(emoji, times, hour, each) => "${emoji} ${times} times, from ${hour} hours, each ${each} hours.";
 
   static m3(emoji) => "${emoji}For each month, every ";
 
@@ -63,7 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "program_month_02" : MessageLookupByLibrary.simpleMessage("FEB"),
     "program_month_03" : MessageLookupByLibrary.simpleMessage("MAR"),
     "program_month_04" : MessageLookupByLibrary.simpleMessage("APR"),
-    "program_month_05" : MessageLookupByLibrary.simpleMessage("AMY"),
+    "program_month_05" : MessageLookupByLibrary.simpleMessage("MAY"),
     "program_month_06" : MessageLookupByLibrary.simpleMessage("JUN"),
     "program_month_07" : MessageLookupByLibrary.simpleMessage("JUL"),
     "program_month_08" : MessageLookupByLibrary.simpleMessage("AUG"),

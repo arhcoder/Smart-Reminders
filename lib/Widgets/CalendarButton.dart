@@ -16,10 +16,32 @@ class CalendarButton extends StatefulWidget
     final int value;
 
     bool isSelected;
+    VoidCallback parentSetStateFunction;
+
+    // To replace the [parentSetStateFunction]
+    // when it doesn't recieves it.
+    static void defaultEmptyFunction(){}
     
-    CalendarButton({Key? key, required this.text,
-    required this.value, required this.reminderKey,
-    this.isSelected = false}): super(key: key);
+    CalendarButton
+    ({
+        Key? key,
+        required this.text,
+        required this.value,
+        required this.reminderKey,
+        this.parentSetStateFunction = defaultEmptyFunction,
+        this.isSelected = false
+    })
+    : super(key: key);
+
+    /*functionThatNeedsToExecutetheParent =
+    functionThatNeedsToExecutetheParent ??
+    (()
+    {
+        // If the constructor has not
+        // [functionThatNeedsToExecutetheParent],
+        // it uses the default empty function.
+        defaultEmptyFunction();
+    });*/
 
     @override
     State <CalendarButton> createState() => CalendarButtonState();
@@ -37,7 +59,17 @@ class CalendarButtonState extends State <CalendarButton>
             (
                 onTap: ()
                 {
-                    widget.isSelected = !widget.isSelected;
+                    if (widget.reminderKey != "KIND")
+                    {
+                        widget.isSelected = !widget.isSelected;
+                    }
+                    else
+                    {
+                        if (widget.isSelected == false)
+                        {
+                            widget.isSelected = !widget.isSelected;
+                        }
+                    }
 
                     if (widget.isSelected)
                     {
@@ -52,6 +84,7 @@ class CalendarButtonState extends State <CalendarButton>
                         );
                     }
 
+                    widget.parentSetStateFunction();
                     setState((){});
                 },
 

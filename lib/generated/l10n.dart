@@ -20,7 +20,7 @@ class S {
   static const AppLocalizationDelegate delegate =
     AppLocalizationDelegate();
 
-  static Future <S> load(Locale locale) {
+  static Future<S> load(Locale locale) {
     final name = (locale.countryCode?.isEmpty ?? false) ? locale.languageCode : locale.toString();
     final localeName = Intl.canonicalizedLocale(name); 
     return initializeMessages(localeName).then((_) {
@@ -31,7 +31,7 @@ class S {
     });
   } 
 
-static S? of(BuildContext context) {
+  static S? of(BuildContext context) {
     return Localizations.of<S>(context, S);
   }
 
@@ -365,10 +365,10 @@ static S? of(BuildContext context) {
     );
   }
 
-  /// `AMY`
+  /// `MAY`
   String get program_month_05 {
     return Intl.message(
-      'AMY',
+      'MAY',
       name: 'program_month_05',
       desc: '',
       args: [],
@@ -665,10 +665,10 @@ static S? of(BuildContext context) {
     );
   }
 
-  /// `{emoji} {times} times, from {hour} hours, each {each} hours`
+  /// `{emoji} {times} times, from {hour} hours, each {each} hours.`
   String reminder_hours_message(Object emoji, Object times, Object hour, Object each) {
     return Intl.message(
-      '$emoji $times times, from $hour hours, each $each hours',
+      '$emoji $times times, from $hour hours, each $each hours.',
       name: 'reminder_hours_message',
       desc: '',
       args: [emoji, times, hour, each],
